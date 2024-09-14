@@ -1,0 +1,108 @@
+import golosinas.*
+
+describe "Testeos de las distintas golosinas" {
+    // Testeos del objeto Bombon
+  test "Bombon precio" {
+    assert.equals(5,bombon.precio())
+  }
+  test "Bombon sabor" {
+    assert.equals('Frutilla',bombon.sabor())
+  }
+  test "Bombon peso inicial" {
+    assert.equals(15, bombon.peso_inicial())
+  }
+  test "Bombon gluten" {
+    assert.equals(false, bombon.gluten())
+  }
+
+    // Testeos del objeto Alfajor
+  test "alfajor precio" {
+    assert.equals(12,alfajor.precio())
+  }
+  test "alfajor sabor" {
+    assert.equals('Chocolate',alfajor.sabor())
+  }
+  test "alfajor peso inicial" {
+    assert.equals(300, alfajor.peso_inicial())
+  }
+  test "alfajor gluten" {
+    assert.equals(true, alfajor.gluten())
+  }
+
+  // Testeos del objeto caramelo
+  test "caramelo precio" {
+    assert.equals(1,caramelo.precio())
+  }
+  test "caramelo sabor" {
+    assert.equals('Frutilla',caramelo.sabor())
+  }
+  test "caramelo peso inicial" {
+    assert.equals(5, caramelo.peso_inicial())
+  }
+  test "caramelo gluten" {
+    assert.equals(false, caramelo.gluten())
+  }
+
+  // Testeos del objeto chupetin
+  test "chupetin precio" {
+    assert.equals(2,chupetin.precio())
+  }
+  test "chupetin sabor" {
+    assert.equals('Naranja',chupetin.sabor())
+  }
+  test "chupetin peso inicial" {
+    assert.equals(7, chupetin.peso_inicial())
+  }
+  test "chupetin gluten" {
+    assert.equals(false, chupetin.gluten())
+  }
+
+  test "chupetin mordisco" {
+    chupetin.mordisco()
+    assert.equals(6.3,chupetin.peso())
+  }
+
+  // Testeos del objeto Oblea
+  test "oblea precio" {
+    assert.equals(5,oblea.precio())
+  }
+  test "oblea sabor" {
+    assert.equals('Vainilla',oblea.sabor())
+  }
+  test "oblea peso inicial" {
+    assert.equals(250, oblea.peso_inicial())
+  }
+  test "oblea gluten" {
+    assert.equals(true, oblea.gluten())
+  }
+
+  // Testeos del objeto Chocolatin
+  test "chocolatin precio" {
+    assert.equals(null,chocolatin.precio())
+  }
+  test "chocolatin sabor" {
+    assert.equals('Chocolate',chocolatin.sabor())
+  }
+  test "chocolatin peso inicial 1" {
+    chocolatin.peso_inicial(40)
+    assert.equals(40, chocolatin.peso_inicial())
+  }
+  test "chocolatin peso inicial 2" {
+    chocolatin.peso_inicial(100)
+    assert.equals(100, chocolatin.peso_inicial())
+  }
+  test "chocolatin gluten" {
+    assert.equals(true, chocolatin.gluten())
+  }
+  
+  // Testeos para las pastillas
+  
+  test "pastilla con gluten" {
+    pastillas.gluten(true)
+    assert.equals(true,pastillas.gluten())
+  }
+  test "pastilla sin gluten" {
+    pastillas.gluten(false)
+    assert.equals(false,pastillas.gluten())
+  }
+}
