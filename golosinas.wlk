@@ -65,10 +65,10 @@ object oblea {
 }
 
 object chocolatin {
-    var property precio = 0
+    var property precio = null
     var property sabor = 'Chocolate'
-    var property peso_inicial = 0
-    var property peso = 0
+    var property peso_inicial = null
+    var property peso = null
     var property gluten = true
 
     method peso_inicial(_peso) {
