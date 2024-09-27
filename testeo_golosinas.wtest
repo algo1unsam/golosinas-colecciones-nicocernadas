@@ -99,10 +99,10 @@ describe "Testeos de las distintas golosinas" {
   
   test "pastilla con gluten" {
     pastillas.gluten(true)
-    assert.equals(true,pastillas.gluten())
+    assert.equals(10, pastillas.precio())
   }
   test "pastilla sin gluten" {
     pastillas.gluten(false)
-    assert.equals(false,pastillas.gluten())
+    assert.equals(7,pastillas.precio())
   }
 }
